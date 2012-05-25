@@ -10,7 +10,7 @@
       }
 
       return String.fromCharCode(key).match(mask);
-    }).bind(pasteEventName, function () {
+    }).live(pasteEventName, function () {
       this.value = $.grep(this.value, function (character) {
         return character.match(mask);
       }).join('');
