@@ -2,7 +2,7 @@
   var pasteEventName = $.browser.msie ? 'paste' : 'input';
 
   $.fn.singlemask = function (mask) {
-    $(this).keydown(function (event) {
+    $(this).live('keydown', function (event) {
       var key = event.keyCode;
 
       if (key < 16 || (key > 16 && key < 32) || (key > 32 && key < 41)) {
